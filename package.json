@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -22,5 +23,9 @@
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
+  },
+  "dependencies": {
+    "punkapi-javascript-wrapper": "^1.0.2",
+    "vue": "^2.6.10"
   }
 }
