@@ -5,13 +5,33 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"> </script>
+	<script src="https://cdn.jsdelivr.net/npm/vuetify@1.5.7/dist/vuetify.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js"></script>
+	<script src="index.js"></script>
     <title>Hello Vue</title>
 </head>
 
 <body>
     <!-- Our vue app will be mounted on this DOM element -->
-    <div id="app"></div>
     <!-- Bundle will be injected below -->
+  <div id="app">
+  <v-app id="inspire">
+    <v-data-table
+      :headers="headers"
+      :items="product"
+      class="elevation-1"
+    >
+      <template v-slot:items="props">
+        <td>{{ props.item.name }}</td>
+        <td class="text-xs-right">{{ props.item.first_brewed }}</td>
+  
+      </template>
+    </v-data-table>
+  </v-app>
+</div>
+
 </body>
 
 </html>
